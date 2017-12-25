@@ -1,0 +1,184 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "base"
+
+
+
+@mixin flex
+  display: flex 
+  flex-wrap: wrap
+
+@mixin flex-center
+  @include flex
+  justify-content: center
+  align-items: center
+
+@mixin flex-around
+  @include flex
+  justify-content: space-around
+  align-items: center
+
+
+
+@mixin flex-between
+  @include flex
+  justify-content: space-between
+  align-items: center
+
+
+
+
+#calendar 
+  width: 7 * $day_size + px;
+  margin: 0 auto;
+  font-size: $calendar_font_size
+  font-family: $light_font
+
+  .calendar-header
+    font-size: $title-5
+    margin: 0;
+    font-weight: 300;
+    color: #3d3d3d;
+    text-align: center;
+    text-transform: uppercase
+    font-family: $main_font
+  
+  
+  table 
+    width: 100%;
+    border-collapse: collapse;
+  
+  
+  .week-days 
+    color: #3d3d3d;
+  
+  
+  .day 
+    width: $day_size + px;
+    height: $day_height;
+    text-align: center;
+    color: #3d3d3d;
+    font-weight: normal;
+    
+
+  .week
+    .day:not(.other-month)
+      cursor: pointer
+      &:hover,
+      &:focus
+        background: #eee; 
+      &.selected
+        background: #00ffff
+      
+    
+  
+  
+  .other-month 
+    opacity: 0.5;
+  
+
+.container
+    width: 90%
+    max-width: 132rem
+    margin-left: auto
+    margin-right: auto  
+
+
+.row
+    @include flex
+    .col
+      flex: 1
+
+
+.is-footer
+    .row 
+        align-items: center
+    .footer-contact-form
+        font-size: 2rem
+        position: relative
+        max-width: 38rem
+        margin: auto
+        @include flex
+        flex-direction: column
+        input
+            border-color: transparent
+            background: transparent
+            border-bottom: 4px solid #434343
+            margin-bottom: 2rem
+            max-width: 33rem
+            & + input
+                margin-left: 2.5rem
+                & + input
+                    margin-left: 6rem
+
+        &:before
+            content: " ";
+            position: absolute;
+            height: 108%;
+            width: 3px;
+            background: #000;
+            bottom: -0.5rem;
+            left: -12rem;
+            -webkit-transform: rotate(-15deg);
+            -ms-transform: rotate(-15deg);
+            transform: rotate(-25deg);
+        .privacy
+            font-size: 1rem
+
+
+.button
+    font-size: 1rem
+    padding: 0.25rem 0.5rem;
+    border-color: transparent;
+
+    &.is-md
+        font-size: 2.3rem
+
+    &.is-circle 
+        border-radius: 2rem
+
+    &.is-gray
+        background: #434343
+        color: white
+
+.button-wrap
+    margin: 0
+
+
+.align-text
+    &.is-right
+        text-align: right
+    &.is-center
+        text-align: center
+    &.is-left
+        text-align: left
+
+@mixin optional-at-root($sel) 
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} 
+    @content;
+  
+
+
+@mixin placeholder 
+  @include optional-at-root('::-webkit-input-placeholder')
+      @content;
+  
+
+  @include optional-at-root(':-moz-placeholder') 
+    @content;
+  
+
+  @include optional-at-root('::-moz-placeholder') 
+    @content;
+  
+
+  @include optional-at-root(':-ms-input-placeholder') 
+    @content;
+  
+@include placeholder 
+  color: #3c3c3c;
+  opacity: 1
+
+
+@import "media" // Всегда в конце
