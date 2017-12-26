@@ -95,6 +95,9 @@
     .col
       flex: 1
 
+    &.v-center
+      align-items: center
+
 
 .is-footer
     .row 
@@ -125,8 +128,6 @@
             background: #000;
             bottom: -0.5rem;
             left: -12rem;
-            -webkit-transform: rotate(-15deg);
-            -ms-transform: rotate(-15deg);
             transform: rotate(-25deg);
         .privacy
             font-size: 1rem
@@ -166,13 +167,15 @@
             right: 0;
             top: 0;
             bottom: 0;
-            transform: skew(-16.5deg);
+            transform: skew(-20deg);
             background: #000;
             display: block;
             background: #00adef
             z-index: -1
         
-        
+    &.is-lg
+      font-size: 1.6rem;
+      padding: 0.4rem .8rem;
 
 
 .button-wrap
@@ -186,6 +189,27 @@
         text-align: center
     &.is-left
         text-align: left
+
+.more-space
+  line-height: 4
+
+.with-line
+  position: relative
+  &:after 
+    content: " ";
+    position: absolute;
+    height: 15rem;
+    width: 1.5px;
+    background: #7b7976;
+    bottom: -10rem;
+    left: -1.5rem;
+    transform: rotate(20deg);
+
+
+.main-img
+    width: 100%;
+    max-height: 75.85rem;
+    object-fit: cover;
 
 @mixin optional-at-root($sel) 
   @at-root #{if(not &, $sel, selector-append(&, $sel))} 
@@ -246,10 +270,10 @@
             line-height: 1.2
 
         .location
-            margin-left: 2rem
+            margin-left: 2.5rem
 
         .name
-            margin-left: 1rem
+            margin-left: 1.25rem
             position: relative
 
             &:before
@@ -259,12 +283,12 @@
                 width: 1px;
                 background: #aeadac;
                 bottom: -19rem;
-                left: -2rem;
-                transform: rotate(16.5deg);
+                left: -2.4rem;
+                transform: rotate(20deg);
         
         .button
             position: relative;
-            left: -1.5rem;
+            left: -2rem;
             
 
         
@@ -286,5 +310,10 @@
     font-family: Helvetica;
     font-weight: bold;
 
+
+#about
+  .col
+    padding: 2rem
+    font-size: 1.6rem
 
 @import "media" // Всегда в конце
