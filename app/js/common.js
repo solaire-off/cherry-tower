@@ -99,4 +99,21 @@ $(function() {
 		$(this).addClass("selected");
 	});
 
+	$(".select-room .room-class .button").click(function(){
+		$(".select-room .room-class .button").removeClass("is-active");
+		$(this).addClass("is-active");
+		var target = $(this).data("select");
+		$(".room-card").fadeOut();
+		$(".room-card." + target).delay(300).fadeIn();
+	});
+
+	$(".select-room .room-class .button").each(function(){
+		if ($(this).hasClass("is-active")){
+			var target = $(this).data("select");
+			$(".room-card").fadeOut();
+			$(".room-card." + target).delay(300).fadeIn();
+		}
+	});
+
+
 });
