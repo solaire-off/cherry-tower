@@ -30,7 +30,7 @@
 
 
 #calendar 
-  width: 7 * $day_size + px;
+  width: 7 * $day_size + rem;
   margin: 0 auto;
   font-size: $calendar_font_size
   font-family: $light_font
@@ -55,7 +55,7 @@
   
   
   .day 
-    width: $day_size + px;
+    width: $day_size + rem;
     height: $day_height;
     text-align: center;
     color: #3d3d3d;
@@ -311,9 +311,35 @@
     font-weight: bold;
 
 
+
 #about
   .col
     padding: 2rem
     font-size: 1.6rem
+
+
+#best
+  padding-bottom: 2rem
+
+.best-item
+  font-size: 2rem;
+  width: 25%;
+  min-width: 33rem
+  margin-bottom: 1.5rem
+  display: flex
+  justify-content: flex-start;
+  align-items: flex-start
+
+  .best-img
+    margin-right: 1rem
+    width: 5rem
+    margin-top: 1.6rem
+
+  .best-info
+    line-height: 1
+    font-family: $bold_font
+
+    &.is-sm
+      font-size: 1.5rem
 
 @import "media" // Всегда в конце
