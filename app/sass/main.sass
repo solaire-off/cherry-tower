@@ -146,6 +146,10 @@
         font-size: 1.6rem;
         padding: 0.5rem 1rem;
 
+    &.is-xs
+      font-size: 1.3rem;
+      padding: 0.6rem 1.2rem;
+
     &.is-white  
       border: 2px solid #d3d2c9;
       color: #434343
@@ -335,7 +339,7 @@
 
 
 #best
-  padding-top: 6rem
+  padding-top: 1rem
   padding-bottom: 2rem
 
 .best-item
@@ -471,25 +475,6 @@
       width: 14rem
 
 
-#rental 
-  margin-top: 4rem
-
-.rental-form
-  margin-top: 2rem
-  input
-    font-size: 2rem
-    background: #dbddde
-    border: transparent
-    padding: .3rem .5rem
-  
-  .field, .select
-    margin-right: 2rem
-    width: 20rem
-
-
-
-
-
 .select-hidden 
   display: none;
   visibility: hidden;
@@ -561,9 +546,67 @@
     &[rel="hide"] 
       display: none;
     
+#rental 
+  margin-top: 4rem
+  padding-bottom: 0
+
+.rental-form
+  margin-top: 2rem
+  input
+    font-size: 2rem
+    background: #dbddde
+    border: transparent
+    padding: .3rem .5rem
   
+  .field, .select
+    margin-right: 2rem
+    width: 20rem
 
 
+
+
+.rental
+  @include flex
+  justify-content: space-between
+  flex-wrap: nowrap
+  margin-top: 5rem
+  .main-rental
+    flex-grow: 1;
+
+
+.small-rental
+  margin-bottom: 6rem
+  img
+    width: 29.5rem;
+    height: 19.5rem;
+    object-fit: cover;
+
+.big-rental 
+  display: flex
+  justify-content: space-around
+  align-items: center
+  margin-bottom: 12rem
+  margin-right: 10rem
+
+  .big-rental-img
+    width: 51%
+    height: 32rem
+    object-fit: cover
+  .big-rental-info
+    width: 40%
+    font-size: 1.4rem
+    margin: 0 4.5% 
+
+    p
+      line-height: 1.2
+      //max-width: 60%
+      margin: 1.5rem auto
+
+    .title
+      line-height: 1
+      text-align:  center
+      font-family: $bold_font
+      text-transform: uppercase
 
 
 @import "media" // Всегда в конце
