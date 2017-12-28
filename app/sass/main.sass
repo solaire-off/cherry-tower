@@ -137,9 +137,24 @@
     font-size: 1rem
     padding: 0.25rem 0.5rem;
     border-color: transparent;
+    cursor: pointer
 
     &.is-md
         font-size: 2.3rem
+
+    &.is-sm
+        font-size: 1.6rem;
+        padding: 0.5rem 1rem;
+
+    &.is-white  
+      border: 2px solid #d3d2c9;
+      color: #434343
+      background: transparent
+
+      &:hover,
+      &:focus
+        background: #d3d2c9
+        color: white
 
     &.is-circle 
         border-radius: 2rem
@@ -241,6 +256,7 @@
   display: flex
   list-style-type: none
   padding-left: 0
+  margin: 0 0 1rem 0;
   .button
     font-size: 2.2rem;
     font-family: MyriadProRegular;
@@ -453,6 +469,99 @@
       top: -$company_height + 2rem
       left: 1rem
       width: 14rem
+
+
+#rental 
+  margin-top: 4rem
+
+.rental-form
+  margin-top: 2rem
+  input
+    font-size: 2rem
+    background: #dbddde
+    border: transparent
+    padding: .3rem .5rem
+  
+  .field, .select
+    margin-right: 2rem
+    width: 20rem
+
+
+
+
+
+.select-hidden 
+  display: none;
+  visibility: hidden;
+  padding-right: 10px;
+
+.select 
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  color: $select-color;
+  width: $select-width;
+  height: $select-height;
+  top: .9rem
+
+.select-styled 
+  position: absolute; 
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: $select-background;
+  padding: .3rem .5rem;
+  transition: all 0.2s ease-in;
+  &:after 
+    content: "";
+    width: 0;
+    height: 0;
+    border: 0.7rem solid transparent;
+    border-color:  transparent  $select-color transparent transparent;
+    position: absolute;
+    top: 1.5rem;
+    right: 0rem
+  
+  &:hover 
+    background-color: darken($select-background, 2);
+  
+  &:active, 
+  &.active 
+    background-color: darken($select-background, 5);
+    &:after 
+      // top: 9px;
+      right: -0.7rem
+      border-color: transparent transparent transparent  $select-color;
+    
+  
+
+
+.select-options 
+  display: none; 
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: darken($select-background, 5);
+  li 
+    margin: 0;
+    padding: .3rem .5rem;
+    text-indent: 15px;
+    border-top: 1px solid darken($select-background, 10);
+    transition: all 0.15s ease-in;
+    &:hover 
+      color: $select-background;
+      background: $select-color;
+    
+    &[rel="hide"] 
+      display: none;
+    
+  
 
 
 
