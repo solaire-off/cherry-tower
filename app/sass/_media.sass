@@ -8,7 +8,7 @@
 	/**/
 
 	html
-		font-size: 8px
+		font-size: 9px
 
 
 
@@ -16,32 +16,154 @@
 @media only screen and (max-width : 1200px)
 	/**/
 	html
-		font-size: 6px
+		font-size: 8px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 	/**/
 	html
-		font-size: 5px
+		// font-size: 5px
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	/**/
 	html
-		font-size: 4px
+		// font-size: 5px
+
+	
+	.room-card
+		margin-bottom: 2rem;
+		margin-top: 2rem;
+	.big-rental
+		.big-rental-img,
+		.big-rental-info
+			max-width: 50rem;
+			width: auto
+		.big-rental-info
+			margin-top: 1rem
+
+	.big-rental
+		flex-direction: column
+
+	.row
+		justify-content: space-around
+
+	.header 
+		.company 
+    	height: 5rem;
+    	width: 100%;
+    	border: none
+    	background: white
+
+	
+
+	.header 
+		.header-title
+			.left-line:before,
+			.right-line:before
+				content: none			
+
+	.section.is-footer
+		.footer-contact-form 
+			margin-top: 6rem
+		.footer-contact-form::before
+			content: none
+		.row
+			flex-direction: column
+	
+	#about
+		.row
+			flex-direction: column
+
+	.header .company .logo
+		top: 1rem
+
+	.header .header-info
+		left: 0
+
+	.header .phone a
+		color: #7b7976
+
+	.header 
+		.phone
+			top: 1.5rem
+	.swap	
+		order: 1;
 
 
+
+	.rental 
+		flex-direction: column
+
+	.big-rental
+		margin-right: 0
+		margin-bottom: 6rem
+
+	.side-rental
+		@include flex-center
+		flex-direction:  column
+
+	.small-rental
+		margin-bottom: 3rem
+		& + p
+			margin-top: 0
+
+	
+/* Custom query */ 
+@media only screen and (max-width : 600px)
+	/**/
+	
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+	.header .header-info ul li
+		margin-right: 0.5rem
+	.header .header-info ul
+		padding-left: 2rem
+	.is-1
+		font-size: $m_title-1
+	// .is-2
+	// 	font-size: $m_title-2
+	// .is-3
+	// 	font-size: $m_title-3
 
-	html
-		font-size: 5px
+	.header-content
+		padding-left: 2rem
+		padding-right: 2rem
+		text-align: center
+		.header-title
+			font-size: 4.5rem
+		.header-subtitle
+			font-size: 3rem
+	.room-card
+		flex-direction: column
+	.room-card .room-info
+		margin-left: 0
+		margin-top: 2rem
 
+	.room-card .room-info .name::before
+		content: none
+
+	.rental-form
+		.form
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.field,
+			.select,
+			button
+				margin-top: .9rem
+				top: 0
+
+	.header .header-info
+		font-size: 2.7rem
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
+	.header .header-info ul li
+		margin-right: 3.5rem;
 
 
 /*==========  Mobile First  ==========*/
