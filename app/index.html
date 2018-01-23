@@ -48,18 +48,18 @@
                         <input class="field" type="text" placeholder="Имя">
                         <input class="field" type="text" placeholder="телефон">
                         <input class="field" type="text" placeholder="e-mail">
-                        <select class="field" id="metr">
-                            <option value="hide">метраж</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                        </select> 
+                        <!-- <select class="field" id="metr"> -->
+                        <!--     <option value="hide">метраж</option> -->
+                        <!--     <option value="1">1</option> -->
+                        <!--     <option value="2">2</option> -->
+                        <!--     <option value="3">3</option> -->
+                        <!-- </select> --> 
 
                         <select class="field" id="type" >
                             <option value="hide">тип площади</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            <option value="торговая">торговая</option>
+                            <option value="складская">складская</option>
+                            <option value="офисная">офисная</option>
                         </select>
                         <button class="button is-circle is-white is-sm">подобрать</button>
                     </form>
@@ -198,66 +198,86 @@
                     </ul>
 
                     <div class="row">
-                        <div class="room-card office">
-                            <img class="room-img" src="img/office-room-img.png" alt="">
+
+                        <!-- office trade utility -->
+                        <div class="room-card trade">
+                            <img class="room-img" src="http://office-arendator.ru/freerooms/img/22415.jpg" alt="">
                             <div class="room-info">
-                                <p class="location is-4">Бизнес-центр «Loft Ville</p>
-                                <p class="name is-3">Офис 15,9 М<sup>2</sup></p>
-                                <p class="price is-4">27 500Р.</p>
-                                <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
-                            </div>
-                        </div>
-                        <div class="room-card office">
-                            <img class="room-img" src="img/office-room-img.png" alt="">
-                            <div class="room-info">
-                                <p class="location is-4">Бизнес-центр «Loft Ville</p>
-                                <p class="name is-3">Офис 15,9 М<sup>2</sup></p>
-                                <p class="price is-4">27 500Р.</p>
-                                <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
-                            </div>
-                        </div>
-                        <div class="room-card office">
-                            <img class="room-img" src="img/office-room-img.png" alt="">
-                            <div class="room-info">
-                                <p class="location is-4">Бизнес-центр «Loft Ville</p>
-                                <p class="name is-3">Офис 15,9 М<sup>2</sup></p>
-                                <p class="price is-4">27 500Р.</p>
-                                <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
-                            </div>
-                        </div>
-                        <div class="room-card office">
-                            <img class="room-img" src="img/office-room-img.png" alt="">
-                            <div class="room-info">
-                                <p class="location is-4">Бизнес-центр «Loft Ville</p>
-                                <p class="name is-3">Офис 15,9 М<sup>2</sup></p>
-                                <p class="price is-4">27 500Р.</p>
+                                <p class="name is-3">1 этаж 222,7 М<sup>2</sup></p>
+                                <p class="price is-4">+ Под банк!</p>
+                                <p class="price is-4"> 96 000Р.</p>
                                 <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
                             </div>
                         </div>
                         <div class="room-card trade">
-                            <img class="room-img" src="img/office-room-img.png" alt="">
+                            <img class="room-img" src="http://office-arendator.ru/freerooms/img/22415.jpg" alt="">
                             <div class="room-info">
-                                <p class="location is-4">Бизнес-центр «Loft Ville</p>
-                                <p class="name is-3">Офис 15,9 М<sup>2</sup></p>
-                                <p class="price is-4">27 500Р.</p>
+                                <p class="name is-3">4 этаж 766 М<sup>2</sup></p>
+                                <p class="price is-4">+ Под автосалон!</p>
+                                <p class="price is-4"> 6 000Р.</p>
                                 <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
                             </div>
                         </div>
                         <div class="room-card trade">
-                            <img class="room-img" src="img/office-room-img.png" alt="">
+                            <img class="room-img" src="http://office-arendator.ru/freerooms/img/16611.jpg" alt="">
                             <div class="room-info">
-                                <p class="location is-4">Бизнес-центр «Loft Ville</p>
-                                <p class="name is-3">Офис 15,9 М<sup>2</sup></p>
-                                <p class="price is-4">27 500Р.</p>
+                                <p class="name is-3">1 этаж 5,9 М<sup>2</sup></p>
+                                <p class="price is-4">122 033Р.</p>
+                                <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
+                            </div>
+                        </div>
+                        <div class="room-card trade">
+                            <img class="room-img" src="http://office-arendator.ru/freerooms/img/19952.jpg" alt="">
+                            <div class="room-info">
+                                <p class="name is-3">3 этаж 27,8 М<sup>2</sup></p>
+                                <p class="price is-4">36 000Р.</p>
+                                <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
+                            </div>
+                        </div>
+                        <div class="room-card office">
+                            <img class="room-img" src="http://office-arendator.ru/freerooms/img/13576.jpg" alt="">
+                            <div class="room-info">
+                                <p class="name is-3">Офис 220,4 М<sup>2</sup></p>
+                                <!-- <p class="price is-4">+ Прямая аренда</p> -->
+                                <p class="price is-4">+ Парковочное место <br/> на 6 месяцев бесплатно!</p>
+                                <p class="price is-4">+ Cклад 19,5кв.м в подарок!</p>
+                                <p class="price is-4"><strike>330 600Р.</strike> 220 400Р.</p>
+                                <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
+                            </div>
+                        </div>
+                        <div class="room-card office">
+                            <img class="room-img" src="http://office-arendator.ru/freerooms/img/24140.jpg" alt="">
+                            <div class="room-info">
+                                <p class="name is-3">Офис 134,2 М<sup>2</sup></p>
+                                <p class="price is-4">+ Cклад 17,2кв.м в подарок!</p>
+                                <p class="price is-4"><strike>201 300Р.</strike> 167 750Р.</p>
+                                <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
+                            </div>
+                        </div>
+                        <div class="room-card office">
+                            <img class="room-img" src="http://office-arendator.ru/freerooms/img/24615.jpg" alt="">
+                            <div class="room-info">
+                                <p class="name is-3">Офис 245,3 М<sup>2</sup></p>
+                                <p class="price is-4">+ Cклад 36,4кв.м в подарок!</p>
+                                <p class="price is-4"><strike>367 950Р.</strike> 245 300Р.</p>
+                                <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
+                            </div>
+                        </div>
+                        <div class="room-card office">
+                            <img class="room-img" src="http://office-arendator.ru/upload/iblock/601/601f28615ee25049d25d285ae7740fa2.jpg" alt="">
+                            <div class="room-info">
+                                <p class="name is-3">Офис 580,2 М<sup>2</sup></p>
+                                <p class="price is-4">+ 2 парковочных места <br/> на 6 месяцев бесплатно!</p>
+                                <p class="price is-4"><strike>870 000Р.</strike> 435 000Р.</p>
                                 <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
                             </div>
                         </div>
                         <div class="room-card utility">
-                            <img class="room-img" src="img/office-room-img.png" alt="">
+                            <img class="room-img" src="http://office-arendator.ru/freerooms/img/24581.jpg" alt="">
                             <div class="room-info">
-                                <p class="location is-4">Бизнес-центр «Loft Ville</p>
-                                <p class="name is-3">Офис 15,9 М<sup>2</sup></p>
-                                <p class="price is-4">27 500Р.</p>
+                                <p class="name is-3">Подвал 32,6 М<sup>2</sup></p>
+                                <p class="price is-4">+ Пряма аренда!</p>
+                                <p class="price is-4"> 12 000Р.</p>
                                 <p><button class="button is-parallelogram is-blue">оставить заявку</button></p>
                             </div>
                         </div>
